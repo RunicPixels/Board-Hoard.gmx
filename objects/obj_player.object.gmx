@@ -30,10 +30,10 @@ hsp = 0;
 vsp = 0;
 
 
-grav = 2;
-maxGrav = 12;
+grav = 3;
+maxGrav = 15;
 
-jumpSpeed = 0.48;
+jumpSpeed = 0.5;
 jumpDuration = 10;
 jumpCalculation = 0;
 linearJump = 1;
@@ -47,7 +47,7 @@ step = 10;
 constantspeed = 12;
 
 collision = false;
-collisionBonusTime = 3;
+collisionBonusTime = 4;
 collisionBonusCalculation = 0;
 
 </string>
