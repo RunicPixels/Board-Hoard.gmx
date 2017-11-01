@@ -3,6 +3,7 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -12,14 +13,25 @@
   <backgrounds name="background">
     <background>background\bg_tiles_</background>
     <background>background\bg_sky</background>
+    <background>background\bg0</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Approach.gml</script>
+    <script>scripts\DrawSpriteSkew.gml</script>
+    <script>scripts\DrawSpriteSkewExt.gml</script>
+    <script>scripts\OnGround.gml</script>
+    <script>scripts\PlaceMeetingException.gml</script>
+    <script>scripts\PlatformCheck.gml</script>
+    <script>scripts\EntityStep.gml</script>
+    <script>scripts\GrassCut.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_tile1</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rooms/rm_room1</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

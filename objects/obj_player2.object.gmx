@@ -25,37 +25,57 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize Variables
-hsp = 0;
-vsp = 0;
+            <string>/// Variables
 
+// Inherit oParEntity variables
+event_inherited();
 
-grav = 2;
-maxGrav = 12;
+facing = 1;
 
-jumpSpeed = 0.48;
-jumpDuration = 10;
-jumpCalculation = 0;
-linearJump = 1;
-jump = false;
-jumpSpin = false;
+// Movement ///////////////////////////////////////////////////////////////////
 
+groundAccel = 1.00;
+groundFric  = 2.00;
+airAccel    = 0.75;
+airFric     = 0.01;
+vxMax       = 5.50;
+vyMax       = 10.0;
+jumpHeight  = 6.00;
+gravNorm    = 0.50;
+gravSlide   = 0.25; 
 
+clingTime   = 2.0;
 
-moveSpeed = 7;
-step = 10;
-constantspeed = 12;
+// Misc ///////////////////////////////////////////////////////////////////////
 
-collision = false;
-collisionBonusTime = 3;
-collisionBonusCalculation = 0;
+// States
+IDLE     = 10;
+RUN      = 11;
+JUMP     = 12;
+ROLL     = 13;
+
+// Initialize properties
+state  = IDLE;
+facing = image_xscale; // Change xscale in editor to adjust initial facing
+
+// For squash + stretch
+xscale = 1;
+yscale = 1;
+
+///////////////////////////////////////////////////////////////////////////////
+
+attacking = false;
+blocking  = false;
+
+//fallTime = 0;
+//fallMax  = 28;
 
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -81,57 +101,29 @@ key_jump = keyboard_check_pressed(vk_space);
 
 //React to inputs
 move = key_left + key_right;
-hsp = moveSpeed;
-
-
-if(move != 0) {
-    move_contact_solid(90, step);
-    if(move &gt; 0) {
-        move_contact_solid(0, hsp);
-        image_xscale = 1;
-    }
-    else if (move &lt; 0) {
-        move_contact_solid(180, hsp);
-        image_xscale = -1;
-    }
-    move_contact_solid(270, step);
-}
+hsp = move * moveSpeed;
  
-if(!place_free(x,y+16))
+if (place_meeting(x,y+1,obj_tile1))
 {
-    collision = true;
-}
-else
-{
-    collision = false;
-}
-
-if(collision == true) {
-    collisionBonusCalculation = collisionBonusTime;
-    if(key_jump == true &amp;&amp; jumpCalculation &lt;= 0)
-    {
-        // Temporary in Player.
-        randomize();
+    if(key_jump == true) {
         jump = true;
-        if(random(10) &gt; 5)
-        {
-            jumpSpin = true;
-        }
-        else
-        {
-            jumpSpin = false;
-        }
         jumpCalculation = jumpDuration;
     }
 }
 
+else {
+    if(vsp &lt; 10)
+    {
+        vsp += grav;
+    }
+}
+
+
+draw_text(5, 5, jumpCalculation);
+
 if(jump == true)
 {
-    if(jumpSpin == true)
-    {
-        image_angle -= 360 / jumpDuration;
-    }
-    vspeed -= (jumpCalculation * jumpSpeed);
+    vsp -= (jumpCalculation * jumpSpeed);
     if(jumpCalculation &lt;= 0)
     {
         jump = false;
@@ -139,47 +131,40 @@ if(jump == true)
     jumpCalculation--;
 }
 
-else {
-    image_angle = 0;
-}
 
-if(vspeed &lt; maxGrav &amp;&amp; collisionBonusCalculation &lt;= 0) {
-    vspeed += grav;
-}
-
-if(collisionBonusCalculation &gt; 0) {
-    if(vspeed &gt; 0) {
-        vspeed *= 0.8;
+//Horizontal Collision
+if (place_meeting(x+hsp,y,obj_tile1))
+{
+    while(!place_meeting(x+sign(hsp),y,obj_tile1))
+    {
+        x += sign(hsp);
     }
-    collisionBonusCalculation--;
+    hsp = 0;
+}
+x += hsp;
+
+
+if(hsp &gt; 0)
+{
+    image_xscale = 1;
+}
+else if (hsp &lt; 0)
+{
+    image_xscale = -1;
 }
 
-move_contact_solid(90, step);
-move_contact_solid(0, constantspeed);
-move_contact_solid(270, step);
+//Vertical Collision
+if (place_meeting(x,y+vsp,obj_tile1))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_tile1))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
+
 </string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_tile1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string></string>
           </argument>
         </arguments>
       </action>
