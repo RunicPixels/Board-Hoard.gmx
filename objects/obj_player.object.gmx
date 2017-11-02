@@ -149,7 +149,7 @@ if(vspeed &lt; maxGrav &amp;&amp; collisionBonusCalculation &lt;= 0) {
 
 if(collisionBonusCalculation &gt; 0) {
     if(vspeed &gt; 0) {
-        vspeed *= 0.8;
+        vspeed *= 0.7;
     }
     collisionBonusCalculation--;
 }

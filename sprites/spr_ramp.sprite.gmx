@@ -2,10 +2,10 @@
 <sprite>
   <type>0</type>
   <xorig>48</xorig>
-  <yorigin>32</yorigin>
-  <colkind>1</colkind>
+  <yorigin>52</yorigin>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>0</sepmasks>
+  <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
   <bbox_right>95</bbox_right>
@@ -18,7 +18,7 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>96</width>
-  <height>64</height>
+  <height>68</height>
   <frames>
     <frame index="0">images\spr_ramp_0.png</frame>
   </frames>

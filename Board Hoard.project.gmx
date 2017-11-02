@@ -23,7 +23,9 @@
     <background>background\bg_sky</background>
     <background>background\bg0</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path0</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\Approach.gml</script>
     <script>scripts\DrawSpriteSkew.gml</script>
