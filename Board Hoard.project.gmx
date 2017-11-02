@@ -29,7 +29,7 @@
   </scripts>
   <objects name="objects">
     <object>objects\obj_player</object>
-    <object>objects\obj_tile1</object>
+    <object>objects\obj_tileCollision</object>
     <object>objects\obj_ramp</object>
   </objects>
   <rooms name="rooms">
