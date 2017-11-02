@@ -30,11 +30,11 @@ hsp = 0;
 vsp = 0;
 
 
-grav = 3;
-maxGrav = 15;
+grav = 1.8;
+maxGrav = 10;
 
-jumpSpeed = 0.5;
-jumpDuration = 10;
+jumpSpeed = 0.15;
+jumpDuration = 15;
 jumpCalculation = 0;
 linearJump = 1;
 jump = false;
@@ -42,12 +42,12 @@ jumpSpin = false;
 
 
 
-moveSpeed = 7;
+moveSpeed = 4;
 step = 10;
-constantspeed = 12;
+constantspeed = 7;
 
 collision = false;
-collisionBonusTime = 4;
+collisionBonusTime = 8;
 collisionBonusCalculation = 0;
 
 </string>
@@ -158,6 +158,28 @@ move_contact_solid(90, step);
 move_contact_solid(0, constantspeed);
 move_contact_solid(270, step);
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_ramp">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
