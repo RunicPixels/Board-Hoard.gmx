@@ -88,11 +88,11 @@ if(move != 0) {
     move_contact_solid(90, step);
     if(move &gt; 0) {
         move_contact_solid(0, hsp);
-        image_xscale = 1;
+        //image_xscale = 1;
     }
     else if (move &lt; 0) {
         move_contact_solid(180, hsp);
-        image_xscale = -1;
+        //image_xscale = -1;
     }
     move_contact_solid(270, step);
 }

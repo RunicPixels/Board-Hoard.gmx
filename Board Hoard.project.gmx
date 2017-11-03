@@ -45,6 +45,7 @@
     <object>objects\obj_longplatform</object>
     <object>objects\obj_mediumplatform</object>
     <object>objects\obj_smallplatform</object>
+    <object>objects\obj_mover</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
