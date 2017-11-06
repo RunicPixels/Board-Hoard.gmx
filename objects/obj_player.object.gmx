@@ -80,7 +80,12 @@ jump = false;
 jumpSpin = false;
 changeJumpAnimation = false;
 
-image_speed = 0.25;
+ramp = false;
+rampCalculation = 0;
+
+imageSpeed = 0.25;
+imageSpeedJump = 0.15;
+image_speed = imageSpeed;
 
 moveSpeed = 4;
 step = 10;
@@ -116,7 +121,7 @@ collisionBonusCalculation = 0;
 //Get the player's input
 key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
-key_jump = keyboard_check_pressed(vk_space);
+key_jump = keyboard_check(vk_space);
 
 //React to inputs
 move = key_left + key_right;
@@ -162,7 +167,7 @@ if(collision == true) {
         {
             jumpSpin = false;
         }
-        jumpCalculation = jumpDuration;
+        jumpCalculation = jumpDuration-(rampCalculation/1.2);
     }
 }
 
@@ -183,6 +188,21 @@ if(jump == true)
         jump = false;
     }
     jumpCalculation--;
+}
+
+if(ramp = true)
+{
+    vspeed -= (rampCalculation * jumpSpeed) + linearJump;
+    if(rampCalculation &lt;= 0)
+    {
+        ramp = false;
+    }
+    rampCalculation--;
+}
+
+if(key_jump == false &amp;&amp; jumpCalculation &gt; 1) {
+    jump = false;
+    jumpCalculation = 0;
 }
 
 else {
@@ -287,6 +307,7 @@ switch(outfit)
             <kind>1</kind>
             <string>/// Animations
 if(changeJumpAnimation = true) {
+    image_speed = imageSpeedJump;
     if(sprite_index == spr_player) 
     {
         sprite_index = spr_playerJump;
@@ -347,6 +368,7 @@ if(changeJumpAnimation = true) {
     }
     if(sprite_index == spr_playerJump2) {
     sprite_index = spr_player2;
+    image_speed = imageSpeed;
 }
 </string>
           </argument>

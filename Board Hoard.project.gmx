@@ -19,8 +19,12 @@
       </sprites>
       <sprite>sprites\spr_platformbig</sprite>
       <sprite>sprites\spr_road</sprite>
+      <sprite>sprites\spr_saramp</sprite>
       <sprite>sprites\spr_building</sprite>
       <sprite>sprites\spr_building2</sprite>
+      <sprite>sprites\spr_flyingplatform</sprite>
+      <sprite>sprites\spr_shorthighplatform</sprite>
+      <sprite>sprites\spr_longhighrampplatform</sprite>
     </sprites>
     <sprite>sprites\spr_dress</sprite>
     <sprites name="Player">
@@ -35,9 +39,7 @@
     <background>background\bg_sky</background>
     <background>background\bg0</background>
   </backgrounds>
-  <paths name="paths">
-    <path>paths\path0</path>
-  </paths>
+  <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Approach.gml</script>
     <script>scripts\DrawSpriteSkew.gml</script>
@@ -60,6 +62,8 @@
       </objects>
       <object>objects\obj_road</object>
       <object>objects\obj_hogestijger</object>
+      <object>objects\obj_vliegstijger</object>
+      <object>objects\obj_saramp</object>
     </objects>
     <objects name="Gameplay">
       <object>objects\obj_speedZone</object>

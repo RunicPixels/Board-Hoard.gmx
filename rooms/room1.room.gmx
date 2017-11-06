@@ -105,8 +105,52 @@
     <instance objName="obj_building" x="14496" y="192" name="inst_3060DFC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_building" x="15040" y="192" name="inst_A34D734F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_building" x="15552" y="192" name="inst_ED2E5F85" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_player" x="160" y="608" name="inst_4CB0A786" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_building" x="4096" y="192" name="inst_FA39D30A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_player" x="64" y="640" name="inst_4CB0A786" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_building" x="4128" y="192" name="inst_FA39D30A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="1312" y="384" name="inst_E5F6BC18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="1792" y="384" name="inst_BAC60CD0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="5920" y="512" name="inst_06B2248B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="6720" y="512" name="inst_83B98477" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="7872" y="512" name="inst_6A714321" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="7872" y="512" name="inst_2964F029" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="8832" y="512" name="inst_60896E0D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="9792" y="512" name="inst_117DC117" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="4672" y="416" name="inst_180C9832" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="5184" y="416" name="inst_D1145CDF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="5696" y="416" name="inst_0E4BA96A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="6240" y="416" name="inst_2D2B351F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="6592" y="320" name="inst_51B715C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="7296" y="320" name="inst_520C84E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="6912" y="416" name="inst_176EBF58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="7648" y="416" name="inst_AF34E370" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="8384" y="416" name="inst_476F1231" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="8064" y="320" name="inst_ABA5B4DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="9056" y="416" name="inst_469C32BE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="10080" y="416" name="inst_0C9414F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="9504" y="416" name="inst_41F4534E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="10496" y="416" name="inst_89852723" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="10816" y="320" name="inst_4A0B0911" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="2592" y="512" name="inst_CBECE64A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="8384" y="512" name="inst_85E123EA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="1984" y="384" name="inst_7AC3444E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="4288" y="512" name="inst_9AC6DA9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="5888" y="416" name="inst_7E6FDD5C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="6784" y="320" name="inst_D130306F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="8256" y="320" name="inst_611FE6C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="11008" y="320" name="inst_13410ACA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_hogestijger" x="11264" y="512" name="inst_792F9470" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="11584" y="416" name="inst_3C7CC6E6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="11872" y="384" name="inst_D17C93D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="12160" y="352" name="inst_C4C59FF5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="11776" y="416" name="inst_D0F9A0E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="12064" y="384" name="inst_9698DD0E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="12608" y="448" name="inst_F28FAA9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="13056" y="352" name="inst_292AB952" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="13504" y="448" name="inst_224A7EFE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_vliegstijger" x="13920" y="352" name="inst_E448918C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="13248" y="352" name="inst_BC8D1844" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="14112" y="352" name="inst_E68AB1DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_saramp" x="7328" y="608" name="inst_AC2BFE4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
