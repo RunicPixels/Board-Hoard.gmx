@@ -67,6 +67,7 @@
       <object>objects\obj_player</object>
     </objects>
     <object>objects\obj_building</object>
+    <object>objects\obj_building2</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
