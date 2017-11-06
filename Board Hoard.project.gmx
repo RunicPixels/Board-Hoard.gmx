@@ -9,12 +9,18 @@
   <sprites name="sprites">
     <sprite>sprites\spr_tile1</sprite>
     <sprites name="Tiles">
-      <sprite>sprites\spr_ramp</sprite>
-      <sprite>sprites\spr_longplatform</sprite>
-      <sprite>sprites\spr_mediumplatform</sprite>
-      <sprite>sprites\spr_smallplatform</sprite>
-      <sprite>sprites\spr_largeramp</sprite>
-      <sprite>sprites\spr_longerplatform</sprite>
+      <sprites name="Old">
+        <sprite>sprites\spr_longerplatform</sprite>
+        <sprite>sprites\spr_smallplatform</sprite>
+        <sprite>sprites\spr_largeramp</sprite>
+        <sprite>sprites\spr_mediumplatform</sprite>
+        <sprite>sprites\spr_longplatform</sprite>
+        <sprite>sprites\spr_ramp</sprite>
+      </sprites>
+      <sprite>sprites\spr_platformbig</sprite>
+      <sprite>sprites\spr_road</sprite>
+      <sprite>sprites\spr_building</sprite>
+      <sprite>sprites\spr_building2</sprite>
     </sprites>
     <sprite>sprites\spr_dress</sprite>
     <sprites name="Player">
@@ -41,20 +47,30 @@
     <script>scripts\GrassCut.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_player</object>
-    <object>objects\obj_tileCollision</object>
-    <object>objects\obj_ramp</object>
-    <object>objects\obj_largeramp</object>
-    <object>objects\obj_longerplatform</object>
-    <object>objects\obj_longplatform</object>
-    <object>objects\obj_mediumplatform</object>
-    <object>objects\obj_smallplatform</object>
-    <object>objects\obj_mover</object>
-    <object>objects\obj_speedZone</object>
-    <object>objects\obj_outfit1</object>
+    <objects name="Tiles">
+      <objects name="OldTiles">
+        <object>objects\obj_ramp</object>
+        <object>objects\obj_largeramp</object>
+        <object>objects\obj_longerplatform</object>
+        <object>objects\obj_longplatform</object>
+        <object>objects\obj_mediumplatform</object>
+        <object>objects\obj_smallplatform</object>
+      </objects>
+      <object>objects\obj_road</object>
+      <object>objects\obj_hogestijger</object>
+    </objects>
+    <objects name="Gameplay">
+      <object>objects\obj_speedZone</object>
+      <object>objects\obj_tileCollision</object>
+      <object>objects\obj_mover</object>
+      <object>objects\obj_outfit1</object>
+      <object>objects\obj_player</object>
+    </objects>
+    <object>objects\obj_building</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room1</room>
+    <room>rooms\room2</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
