@@ -26,6 +26,8 @@
     <sprites name="Player">
       <sprite>sprites\spr_player2</sprite>
       <sprite>sprites\spr_player</sprite>
+      <sprite>sprites\spr_playerJump</sprite>
+      <sprite>sprites\spr_playerJump2</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
