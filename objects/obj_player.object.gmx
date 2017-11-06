@@ -35,7 +35,7 @@ part1 = part_type_create();
 part_type_shape(part1,pt_shape_star);
 part_type_scale(part1,1,1);
 part_type_size(part1,0.55,0.6,-0.01,0);
-part_type_alpha2(part1, 0.22,0.00);
+part_type_alpha2(part1, 0.55,0.22);
 part_type_life(part1, 15, 20);
 part_type_colour3(part1,c_red, c_aqua, c_fuchsia);
 
@@ -79,7 +79,7 @@ linearJump = 0.1;
 jump = false;
 jumpSpin = false;
 
-
+image_speed = 0.25;
 
 moveSpeed = 4;
 step = 10;
