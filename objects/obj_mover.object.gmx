@@ -51,6 +51,10 @@
             <string>constantspeedmover = obj_player.constantspeed;
 move_contact_solid(0, constantspeedmover);
 y=obj_player.y;
+if(x &gt;= room_width) {
+    obj_player.x = 0;
+    x = 600;
+}
 </string>
           </argument>
         </arguments>
