@@ -69,11 +69,13 @@ vsp = 0;
 // Zoom
 basezoom = 1.2;
 zoom = basezoom;
-jumpzoom = 1.15;
+jumpzoom = 1.25;
+rampzoom = 1.5;
 
 //Shake
-shakeIntensity = 12;
+shakeIntensity = 5;
 screenshake = 0;
+canShake = false;
 
 //Outfits
 outfit = 0;
@@ -114,30 +116,6 @@ collisionBonusCalculation = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>shakeIntensity -= 10;
-alarm[0] = 0.2 * room_speed;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
     <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
@@ -164,8 +142,6 @@ key_jump = keyboard_check(vk_space);
 
 //React to inputs
 move = key_left + key_right;
-hsp = moveSpeed;
-
 
 if(move != 0) {
     move_contact_solid(90, step);
@@ -182,7 +158,9 @@ if(move != 0) {
  
 if(!place_free(x,y+16))
 {
-    collision = true;
+    if(collision = false){
+        collision = true;
+    } 
 }
 else
 {
@@ -190,6 +168,7 @@ else
 }
 
 if(collision == true) {
+
     if(jump == false) {
         collisionBonusCalculation = collisionBonusTime;
     }
@@ -231,6 +210,7 @@ if(jump == true)
 
 if(ramp = true)
 {
+    changeJumpAnimation = true;
     vspeed -= (rampCalculation * jumpSpeed) + linearJump;
     if(rampCalculation &lt;= 0)
     {
@@ -350,8 +330,21 @@ switch(outfit)
             <kind>1</kind>
             <string>/// Animations
 if(changeJumpAnimation = true) {
-    if(zoom&gt;jumpzoom){
-    zoom -= 0.01;
+    if(jump == true) {
+        if(zoom&gt;jumpzoom){
+            zoom -= 0.003;
+        }
+        if(zoom&lt;jumpzoom){
+            zoom += 0.003;
+        }
+    }
+    if(ramp == true) {
+        if(zoom&gt;rampzoom){
+            zoom -= 0.01;
+        }
+        if(zoom&lt;rampzoom){
+            zoom += 0.01;
+        }
     }
     image_speed = imageSpeedJump;
     if(sprite_index == spr_player) 
@@ -364,7 +357,10 @@ if(changeJumpAnimation = true) {
     }
 }
 else if(zoom&lt;basezoom){
- zoom += 0.01;
+    zoom += 0.01;
+}
+else if(zoom&gt;basezoom){
+    zoom -= 0.01;
 }
 view_wview[0] = 1280 / zoom
 view_hview[0] = 720 / zoom
@@ -391,10 +387,7 @@ view_hview[0] = 720 / zoom
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-    shakeIntensity = 5;
-    screenshake = 2;
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -452,6 +445,7 @@ view_hview[0] = 720 / zoom
     obj_mover.y = baseposY;
     screenshake--;
     shakeIntensity--;
+    canShake = false;
 }
 </string>
           </argument>
