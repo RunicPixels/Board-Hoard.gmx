@@ -82,12 +82,12 @@ canShake = false;
 outfit = 0;
 
 //Gravity
-grav = 1.82;
+grav = 1.5;
 maxGrav = 10.5;
 
 //Jumps
-jumpSpeed = 0.121;
-jumpDuration = 22;
+jumpSpeed = 0.061;
+jumpDuration = 33;
 jumpCalculation = 0;
 linearJump = 0.1;
 jump = false;
@@ -95,6 +95,7 @@ jumpSpin = false;
 changeJumpAnimation = false;
 
 //Ramps
+rampSpeed = 0.031;
 ramp = false;
 rampCalculation = 0;
 
@@ -106,7 +107,7 @@ image_speed = imageSpeed;
 //Movement
 moveSpeed = 4;
 step = 10;
-constantspeed = 8;
+constantspeed = 7;
 
 //Collision
 collision = false;
@@ -212,7 +213,7 @@ if(jump == true)
 if(ramp = true)
 {
     changeJumpAnimation = true;
-    vspeed -= (rampCalculation * jumpSpeed) + linearJump;
+    vspeed -= (rampCalculation * rampSpeed) + linearJump;
     if(rampCalculation &lt;= 0)
     {
         ramp = false;

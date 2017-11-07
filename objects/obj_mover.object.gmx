@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>constantspeedmover = 9;
+            <string>constantspeedmover = 7;
 </string>
           </argument>
         </arguments>
@@ -48,7 +48,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_contact_solid(0, constantspeedmover);
+            <string>constantspeedmover = obj_player.constantspeed;
+move_contact_solid(0, constantspeedmover);
 y=obj_player.y;
 </string>
           </argument>
