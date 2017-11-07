@@ -34,6 +34,8 @@
       <sprite>sprites\spr_playerJump</sprite>
       <sprite>sprites\spr_playerJump2</sprite>
     </sprites>
+    <sprite>sprites\spr_rainbowhoop</sprite>
+    <sprite>sprites\spr_flaminghoop</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_tiles_</background>
@@ -64,6 +66,8 @@
       <object>objects\obj_road</object>
       <object>objects\obj_hogestijger</object>
       <object>objects\obj_vliegstijger</object>
+      <object>objects\obj_flaminghoop</object>
+      <object>objects\obj_rainbowhoop</object>
       <object>objects\obj_saramp</object>
       <object>objects\obj_doubleplatform</object>
     </objects>

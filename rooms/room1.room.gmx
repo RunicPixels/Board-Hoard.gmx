@@ -152,6 +152,22 @@
     <instance objName="obj_saramp" x="14112" y="352" name="inst_E68AB1DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_saramp" x="7328" y="608" name="inst_AC2BFE4E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_doubleplatform" x="96" y="512" name="inst_2276976D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="1024" y="448" name="inst_63748A75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="2112" y="288" name="inst_0368BEDD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="2720" y="448" name="inst_113E0579" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="4448" y="384" name="inst_B9E2E1F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="5024" y="352" name="inst_DA240D8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="7168" y="288" name="inst_47B1F747" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="7936" y="288" name="inst_56DDAB3D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="9888" y="288" name="inst_984E6F10" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="11168" y="224" name="inst_A42FAF1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="12480" y="224" name="inst_C33ED6FA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_rainbowhoop" x="14272" y="288" name="inst_2166F910" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flaminghoop" x="12896" y="256" name="inst_099B137C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flaminghoop" x="8416" y="160" name="inst_803BD2E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flaminghoop" x="5504" y="224" name="inst_3671C4AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flaminghoop" x="2272" y="320" name="inst_3454EB43" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_flaminghoop" x="1632" y="192" name="inst_A29A149D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
