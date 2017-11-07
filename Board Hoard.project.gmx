@@ -25,6 +25,7 @@
       <sprite>sprites\spr_flyingplatform</sprite>
       <sprite>sprites\spr_shorthighplatform</sprite>
       <sprite>sprites\spr_longhighrampplatform</sprite>
+      <sprite>sprites\spr_doubleplatform</sprite>
     </sprites>
     <sprite>sprites\spr_dress</sprite>
     <sprites name="Player">
@@ -64,6 +65,7 @@
       <object>objects\obj_hogestijger</object>
       <object>objects\obj_vliegstijger</object>
       <object>objects\obj_saramp</object>
+      <object>objects\obj_doubleplatform</object>
     </objects>
     <objects name="Gameplay">
       <object>objects\obj_speedZone</object>

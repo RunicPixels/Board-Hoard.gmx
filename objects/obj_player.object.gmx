@@ -79,6 +79,7 @@ linearJump = 0.1;
 jump = false;
 jumpSpin = false;
 changeJumpAnimation = false;
+jumpzoom = 1.5;
 
 ramp = false;
 rampCalculation = 0;
@@ -89,7 +90,7 @@ image_speed = imageSpeed;
 
 moveSpeed = 4;
 step = 10;
-constantspeed = 9;
+constantspeed = 8;
 
 collision = false;
 collisionBonusTime = 4;
