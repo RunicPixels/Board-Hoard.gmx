@@ -66,6 +66,7 @@ part_emitter_stream(part1_sys,part1_emit,part1, 1);
             <string>///Initialize Variables
 hsp = 0;
 vsp = 0;
+
 // Zoom
 basezoom = 1.2;
 zoom = basezoom;
@@ -227,9 +228,6 @@ if(key_jump == false &amp;&amp; jumpCalculation &gt; 1) {
 else {
     image_angle = 0;
 }
-
-
-
 
 
 if(vspeed &lt; maxGrav &amp;&amp; collisionBonusCalculation &lt;= 0) {
@@ -472,8 +470,8 @@ view_hview[0] = 720 / zoom
             <string>if(screenshake &gt; 0) {
     baseposX = obj_mover.x;
     baseposY = obj_mover.y;
-    obj_mover.x += random_range (-shakeIntensity,shakeIntensity);
-    obj_mover.y += random_range (-shakeIntensity,shakeIntensity);
+    //obj_mover.x += random_range (-shakeIntensity,shakeIntensity);
+    //obj_mover.y += random_range (-shakeIntensity,shakeIntensity);
 }
 </string>
           </argument>
