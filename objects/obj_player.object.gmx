@@ -3,7 +3,7 @@
   <spriteName>spr_player</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>-99999999</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -71,6 +71,7 @@ outfit = 0;
 
 grav = 1.82;
 maxGrav = 10.5;
+zoom = 1;
 
 jumpSpeed = 0.121;
 jumpDuration = 22;
@@ -318,6 +319,18 @@ if(changeJumpAnimation = true) {
         sprite_index = spr_playerJump2;
     }
 }
+zoom += 0.01;
+//try not to use magic numbers like "1920", instead use definite variables (in this case, the width of the room) to make it easier if you need to change something later
+var w = room_width*zoom;
+var h = room_height*zoom;
+
+//center the view in the middle of the room
+var xx = (room_width - w) / 2;
+var yy = (room_height - h) / 2;
+
+//update view coords
+view_xview[0] = xx;
+view_yview[0] = yy;
 </string>
           </argument>
         </arguments>
