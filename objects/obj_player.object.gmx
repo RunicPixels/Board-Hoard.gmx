@@ -66,13 +66,23 @@ part_emitter_stream(part1_sys,part1_emit,part1, 1);
             <string>///Initialize Variables
 hsp = 0;
 vsp = 0;
+// Zoom
+basezoom = 1.2;
+zoom = basezoom;
+jumpzoom = 1.15;
 
+//Shake
+shakeIntensity = 12;
+screenshake = 0;
+
+//Outfits
 outfit = 0;
 
+//Gravity
 grav = 1.82;
 maxGrav = 10.5;
-zoom = 1;
 
+//Jumps
 jumpSpeed = 0.121;
 jumpDuration = 22;
 jumpCalculation = 0;
@@ -80,22 +90,49 @@ linearJump = 0.1;
 jump = false;
 jumpSpin = false;
 changeJumpAnimation = false;
-jumpzoom = 1.5;
 
+//Ramps
 ramp = false;
 rampCalculation = 0;
 
+//ImageSpeed
 imageSpeed = 0.25;
 imageSpeedJump = 0.15;
 image_speed = imageSpeed;
 
+//Movement
 moveSpeed = 4;
 step = 10;
 constantspeed = 8;
 
+//Collision
 collision = false;
 collisionBonusTime = 4;
 collisionBonusCalculation = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>shakeIntensity -= 10;
+alarm[0] = 0.2 * room_speed;
 </string>
           </argument>
         </arguments>
@@ -211,6 +248,10 @@ else {
     image_angle = 0;
 }
 
+
+
+
+
 if(vspeed &lt; maxGrav &amp;&amp; collisionBonusCalculation &lt;= 0) {
     vspeed += grav;
 }
@@ -309,6 +350,9 @@ switch(outfit)
             <kind>1</kind>
             <string>/// Animations
 if(changeJumpAnimation = true) {
+    if(zoom&gt;jumpzoom){
+    zoom -= 0.01;
+    }
     image_speed = imageSpeedJump;
     if(sprite_index == spr_player) 
     {
@@ -319,18 +363,12 @@ if(changeJumpAnimation = true) {
         sprite_index = spr_playerJump2;
     }
 }
-zoom += 0.01;
-//try not to use magic numbers like "1920", instead use definite variables (in this case, the width of the room) to make it easier if you need to change something later
-var w = room_width*zoom;
-var h = room_height*zoom;
+else if(zoom&lt;basezoom){
+ zoom += 0.01;
+}
+view_wview[0] = 1280 / zoom
+view_hview[0] = 720 / zoom
 
-//center the view in the middle of the room
-var xx = (room_width - w) / 2;
-var yy = (room_height - h) / 2;
-
-//update view coords
-view_xview[0] = xx;
-view_yview[0] = yy;
 </string>
           </argument>
         </arguments>
@@ -353,7 +391,10 @@ view_yview[0] = yy;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>
+    shakeIntensity = 5;
+    screenshake = 2;
+</string>
           </argument>
         </arguments>
       </action>
@@ -383,6 +424,62 @@ view_yview[0] = yy;
     if(sprite_index == spr_playerJump2) {
     sprite_index = spr_player2;
     image_speed = imageSpeed;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="77">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(screenshake &gt; 0) {
+    obj_mover.x = baseposX;
+    obj_mover.y = baseposY;
+    screenshake--;
+    shakeIntensity--;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="76">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(screenshake &gt; 0) {
+    baseposX = obj_mover.x;
+    baseposY = obj_mover.y;
+    obj_mover.x += random_range (-shakeIntensity,shakeIntensity);
+    obj_mover.y += random_range (-shakeIntensity,shakeIntensity);
 }
 </string>
           </argument>
